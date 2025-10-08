@@ -1,24 +1,115 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Controle de Protocolos</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css">
+    <link rel="icon" href="/favicon.ico">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
 </head>
-<body>
-    
-    <div>
-        <p>bloco1</p>
-    </div>
-    <div>
-        <div>
-            <p>bloco2/1</p>
-        </div>
-        <div>
-            <p>bloco2/2</p>
-        </div>
-    </div>
 
+<body>
+
+    <div class="container-principal">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <img src="ProtocolTrackerLogo.png" alt="Logo Protocol Tracker">
+            </div>
+
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span class="material-icons-outlined">folder</span> Remessas
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="material-icons-outlined">description</span> Protocolos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="material-icons-outlined">content_cut</span> Preparação
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="material-icons-outlined">adf_scanner</span> Digitalização
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="material-icons-outlined">group</span> Usuarios
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <div class="div-conteudo-principal">
+            <div class="content-header">
+                <div class="header-title">
+                    <h2>Página sem Título</h2>
+                </div>
+                <div class="header-actions">
+
+                    <div class="welcome-message">
+                        <span>Bem-vindo, Mateus</span>
+                    </div>
+
+                    <div class="dropdown">
+                        <a href="#" id="user-menu-toggle" class="action-icon" title="Perfil do Usuário">
+                            <span class="material-icons-outlined">account_circle</span>
+                        </a>
+                        <div id="user-menu" class="dropdown-menu">
+                            <a href="/editar-cadastro"><span class="material-icons-outlined">edit</span> Editar Cadastro</a>
+                            <a href="/editar-senha"><span class="material-icons-outlined">key</span> Alterar Senha</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="/logout"><span class="material-icons-outlined">logout</span> Sair</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <main class="conteudo-principal">
+
+                <h2>Adicionar Novo Protocolo</h2>
+                <p>Preencha os campos abaixo para registrar um novo protocolo digitalizado.</p>
+
+                <form action="/home" method="post" class="protocolo-form">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="numero">Número do Protocolo (6 dígitos):</label>
+                            <input type="text" id="numero" name="numero" required maxlength="6" placeholder="Ex: 123456">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="paginas">Quantidade de Páginas:</label>
+                            <input type="number" id="paginas" name="paginas" required placeholder="Ex: 2000">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="observacoes">Observações (Opcional):</label>
+                        <textarea id="observacoes" name="observacoes" rows="3" placeholder="Ex: Prontuário Nº9999 possui várias páginas com impressões falhadas"></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <a href="/home" class="btn-limpar"><span class="material-icons-outlined">cancel</span> Limpar</a>
+                        <button type="submit"><span class="material-icons-outlined">add</span> Adicionar Protocolo</button>
+                    </div>
+                </form>
+
+            </main>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
+    <script src="/assets/js/app.js"></script>
 </body>
 </html>
