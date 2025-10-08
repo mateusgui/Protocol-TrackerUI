@@ -16,35 +16,49 @@
     <div class="container-principal">
         <aside class="sidebar">
             <div class="sidebar-logo">
-                <img src="ProtocolTrackerLogo.png" alt="Logo Protocol Tracker">
+                <img src="/ProtocolTrackerLogo.png" alt="Logo Protocol Tracker" class="logo-dark">
             </div>
 
             <nav>
                 <ul>
-                    <li>
-                        <a href="#">
-                            <span class="material-icons-outlined">folder</span> Remessas
-                        </a>
+                    <li class="has-submenu">
+                        <a href="#"><span class="material-icons-outlined">folder</span> Remessas</a>
+                        <ul class="submenu">
+                            <li><a href="/remessas/nova">Nova Remessa</a></li>
+                            <li><a href="/remessas">Visualizar Remessas</a></li>
+                        </ul>
                     </li>
-                    <li>
-                        <a href="#">
-                            <span class="material-icons-outlined">description</span> Protocolos
-                        </a>
+
+                    <li class="has-submenu">
+                        <a href="#"><span class="material-icons-outlined">description</span> Protocolos</a>
+                        <ul class="submenu">
+                            <li><a href="/protocolos/novo">Novo Protocolo</a></li>
+                            <li><a href="/protocolos">Visualizar Protocolos</a></li>
+                        </ul>
                     </li>
-                    <li>
-                        <a href="#">
-                            <span class="material-icons-outlined">content_cut</span> Preparação
-                        </a>
+
+                    <li class="has-submenu">
+                        <a href="#"><span class="material-icons-outlined">content_cut</span> Preparação</a>
+                        <ul class="submenu">
+                            <li><a href="/preparacao/pendentes">Preparar Protocolos</a></li>
+                            <li><a href="/preparacao/dashboard">Dashboard</a></li>
+                        </ul>
                     </li>
-                    <li>
-                        <a href="#">
-                            <span class="material-icons-outlined">adf_scanner</span> Digitalização
-                        </a>
+
+                    <li class="has-submenu">
+                        <a href="#"><span class="material-icons-outlined">adf_scanner</span> Digitalização</a>
+                        <ul class="submenu">
+                            <li><a href="/digitalizacao/pendentes">Digitalizar Protocolos</a></li>
+                            <li><a href="/digitalizacao/dashboard">Dashboard</a></li>
+                        </ul>
                     </li>
-                    <li>
-                        <a href="#">
-                            <span class="material-icons-outlined">group</span> Usuarios
-                        </a>
+                    
+                    <li class="has-submenu">
+                        <a href="#"><span class="material-icons-outlined">group</span> Usuários</a>
+                        <ul class="submenu">
+                            <li><a href="/admin/usuarios/novo">Novo Usuário</a></li>
+                            <li><a href="/admin/usuarios">Visualizar Usuários</a></li>
+                        </ul>
                     </li>
                 </ul>
             </nav>
@@ -77,6 +91,7 @@
             </div>
             <main class="conteudo-principal">
 
+
                 <h2>Adicionar Novo Protocolo</h2>
                 <p>Preencha os campos abaixo para registrar um novo protocolo digitalizado.</p>
 
@@ -105,11 +120,12 @@
                     </div>
                 </form>
 
+
             </main>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
-    <script src="/assets/js/app.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>

@@ -798,3 +798,43 @@ textarea {
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
+
+
+/* === ESTILOS PARA O MENU ACORDEÃO DA SIDEBAR === */
+
+/* Adiciona uma seta para indicar que o menu pode ser aberto */
+.sidebar nav ul li.has-submenu > a::after {
+    content: 'expand_more';
+    font-family: 'Material Icons Outlined';
+    float: right;
+    transition: transform 0.3s ease;
+}
+
+/* Gira a seta quando o menu está aberto */
+.sidebar nav ul li.has-submenu.open > a::after {
+    transform: rotate(180deg);
+}
+
+/* Estilo do submenu (começa "fechado") */
+.sidebar .submenu {
+    list-style: none;
+    max-height: 0; /* Começa com altura zero */
+    overflow: hidden; /* Esconde o conteúdo que transborda */
+    transition: max-height 0.4s ease-in-out; /* Animação suave */
+    background-color: rgba(0, 0, 0, 0.2); /* Um fundo levemente mais escuro */
+    border-radius: 6px;
+    margin-left: 10px;
+}
+
+/* Estilo dos links dentro do submenu */
+.sidebar .submenu li a {
+    padding-left: 25px; /* Adiciona um recuo */
+    font-size: 0.9em;
+}
+
+/* Alinha o ícone e o texto nos links principais */
+.sidebar nav ul li > a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
